@@ -1,9 +1,35 @@
+'use client';
+
 import Link from "next/link";
 import Image from "next/image";
 
 export default function NotFound() {
   return (
     <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
+      {/* 网站Logo和品牌区域 */}
+      <header className="row-start-1 flex items-center gap-3">
+        <Image
+          src="/favicon.ico"
+          alt="网站图标"
+          width={32}
+          height={32}
+          className="rounded-md"
+        />
+        <div className="flex items-center gap-2">
+          <Image
+            className="dark:invert"
+            src="/next.svg"
+            alt="Next.js logo"
+            width={120}
+            height={25}
+            priority
+          />
+          <span className="text-sm text-gray-500 dark:text-gray-400 font-medium">
+            Demand Bloommmm
+          </span>
+        </div>
+      </header>
+
       <main className="flex flex-col gap-[32px] row-start-2 items-center text-center">
         {/* 404 图标 */}
         <div className="relative">
@@ -39,14 +65,8 @@ export default function NotFound() {
             href="/"
             className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
           >
-            <Image
-              className="dark:invert"
-              src="/next.svg"
-              alt="Next.js logo"
-              width={20}
-              height={20}
-            />
-            返回首页
+            
+            返回首页123
           </Link>
           <button
             onClick={() => window.history.back()}
