@@ -1,4 +1,5 @@
 import { BlogList } from '@/components/features';
+import FeedbackForm from '@/components/other/FeedbackForm';
 import Link from 'next/link';
 
 export default function Blog2Page() {
@@ -25,6 +26,13 @@ export default function Blog2Page() {
       {/* 博客列表内容 */}
       <main>
         <BlogList />
+        
+        {/* 反馈表单 */}
+        <div className="max-w-7xl mx-auto px-4 py-8">
+          <div className="max-w-2xl mx-auto">
+            <FeedbackForm />
+          </div>
+        </div>
       </main>
 
       {/* 页面底部 */}
