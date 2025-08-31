@@ -1,3 +1,4 @@
+//blog2的详情页，通过【slug】文件夹结构实现动态路由，目录结构为blog2/slug/page.tsx
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { getBlogPost, BlogDetail } from '@/components/features';

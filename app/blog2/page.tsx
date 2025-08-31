@@ -1,3 +1,4 @@
+//blog2的列表页
 import { BlogList } from '@/components/features';
 import FeedbackForm from '@/components/other/FeedbackForm';
 import Link from 'next/link';
