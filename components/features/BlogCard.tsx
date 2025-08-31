@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { BlogCardProps } from './types';
+import { Button } from '@/components/ui/button';
 
 export default function BlogCard({ post }: BlogCardProps) {
   return (
@@ -35,15 +36,14 @@ export default function BlogCard({ post }: BlogCardProps) {
         </div>
         
         <div className="mt-4">
-          <Link 
-            href={`/blog/${post.slug}`}
-            className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-sm"
-          >
-            阅读全文
-            <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </Link>
+          <Button asChild variant="link" size="sm">
+            <Link href={`/blog/${post.slug}`}>
+              阅读全文
+              <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </Button>
         </div>
       </div>
     </article>
