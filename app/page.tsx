@@ -5,7 +5,7 @@ export default async function Home() {
   let message = "";
   try {
     // 使用相对路径，这样在生产环境中也能正常工作
-    const response = await fetch('/api/hello');
+    const response = await fetch('https://demand-bloom-1-test2.vercel.app/api/hello');
     const data = await response.json();
     message = data.message;
   } catch (error) {
