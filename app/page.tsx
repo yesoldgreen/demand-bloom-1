@@ -4,7 +4,8 @@ export default async function Home() {
   // 在服务端获取数据
   let message = "";
   try {
-    const response = await fetch('http://localhost:3000/api/hello');
+    // 使用相对路径，这样在生产环境中也能正常工作
+    const response = await fetch('/api/hello');
     const data = await response.json();
     message = data.message;
   } catch (error) {
