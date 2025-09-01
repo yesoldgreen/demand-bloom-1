@@ -19,7 +19,7 @@ export default function BlogCard({ post }: BlogCardProps) {
         
         <h2 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
           <Link 
-            href={`/blog/${post.slug}`}
+            href={`/blog2/${post.slug}`}
             className="hover:text-blue-600 transition-colors duration-200"
           >
             {post.title}
@@ -37,7 +37,7 @@ export default function BlogCard({ post }: BlogCardProps) {
         
         <div className="mt-4">
           <Button asChild variant="link" size="sm">
-            <Link href={`/blog/${post.slug}`}>
+            <Link href={`/blog2/${post.slug}`}>
               阅读全文
               <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
