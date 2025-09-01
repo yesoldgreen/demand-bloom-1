@@ -12,8 +12,9 @@ export async function generateStaticParams() {
   ];
 }
 
-export default async function Blog2DetailPage({ params }: { params: { slug: string } }) {
-  const post = await getBlogPost(params.slug);
+export default async function Blog2DetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const post = await getBlogPost(slug);
   
   if (!post) {
     notFound();
